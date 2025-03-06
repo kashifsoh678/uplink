@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "MegaByte Light";
+  src: url("MegabyteLight.otf") format("truetype");
+}
+@font-face {
+  font-family: "MegaByte Regular";
+  src: url("MegabyteRegular.otf") format("truetype");
+}
+@font-face {
+  font-family: "MegaByte Bold";
+  src: url("MegabyteBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "MegaByte Medium";
+  src: url("MegabyteMedium.otf") format("truetype");
+}
+/* ----------------font-mb--------------------- */
+.font-mb-bold {
+  font-family: "MegaByte Bold";
+  font-weight: 600;
+}
+.font-mb-extra-bold {
+  font-family: "MegaByte Bold";
+  font-weight: 700;
+}
+.font-mb-medium {
+  font-family: "MegaByte Medium";
+  font-weight: 500;
+}
+.font-mb-light {
+  font-family: "MegaByte Light";
+  font-weight: 300;
+}
+.font-mb-regular {
+  font-family: "MegaByte Regular";
+  font-weight: 400;
+}
