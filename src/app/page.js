@@ -18,7 +18,7 @@ import PrimaryHeading from "@/components/typography/primary-heading";
 import { FaRegClock } from "react-icons/fa6";
 import { FaqsDataArray, WhyUplinkDataArray } from "@/utils/constants";
 import FAQS from "@/components/modules/Faqs";
-
+import AnimationProviderContainer from "@/components/common/animation/animation-container";
 export default function Home() {
   return (
     <>
@@ -142,13 +142,13 @@ export default function Home() {
         <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto">
           <PrimaryHeading
             heading={"Why Uplinks"}
-            className="text-3xl md:text-4xl lg:text-6xl font-mb-bold text-center"
+            className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold text-center"
           />
           <PrimaryDescription
             description={
               "Choosing SEO Flox Means Partnering With An SEO Team Dedicated To Your Growth And Lasting Online Success."
             }
-            className="text-center !text-md md:!text-xl  lg:!text-2xl text-[#B5B5B5]  font-mb-regular"
+            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl border"
           />
         </div>
 
@@ -176,9 +176,45 @@ export default function Home() {
           ))}
         </div>
       </LayoutProvider>
+      {/* ============================================================================= About */}
+      <LayoutProvider
+        parentClassName={"px-5 border w-full "}
+        childClassName={
+          "border flex flex-col max-md:gap-4  md:flex-row my-[20px] md:my-[30px] lg:my-[50px]"
+        }
+      >
+        <div className="border w-full flex flex-col gap-4 lg:gap-8 justify-center">
+          <PrimaryHeading
+            heading={"About Uplinks"}
+            className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold"
+          />
+          <PrimaryDescription
+            description={
+              "Struggling to rank your website? Uplinke.com is here to help! We specialize in improving search rankings, boosting visibility, and driving organic traffic. Get noticed today!"
+            }
+            className="text-[#B5B5B5] font-mb-regular border"
+          />
+          <PrimaryDescription
+            description={
+              "Say goodbye to wasting money on ineffective backlinks and outdated SEO tactics! With our help, you can generate unlimited leads and elevate your website’s authority through genuine, organic strategies."
+            }
+            className="text-[#B5B5B5] font-mb-regular border"
+          />
+          <PrimaryDescription
+            description={
+              "Pay only for results! We charge only after achieving your satisfaction. Call us now to secure your success!"
+            }
+            className="text-[#B5B5B5] font-mb-regular border"
+          />
+        </div>
+        <div className="border w-full">
+          <AnimationProviderContainer
+            animation={"assets/animations/about_anim.json"}
+          />
+        </div>
+      </LayoutProvider>
       {/* ============================================================================= Why */}
       <FAQS />
-    
     </>
   );
 }

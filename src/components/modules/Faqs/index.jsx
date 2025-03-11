@@ -23,7 +23,7 @@ const FAQS = () => {
       <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto">
         <PrimaryHeading
           heading={"Frequently Asked Questions"}
-          className="text-3xl md:text-4xl lg:text-6xl font-mb-bold text-center"
+          className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold text-center"
         />
         <PrimaryDescription
           description={

@@ -5,6 +5,9 @@ import SecondaryHeading from "@/components/typography/secondary-heading";
 import LayoutProvider from "@/components/wrapper/layout-provider";
 import React from "react";
 import paymethods from "../../../../public/assets/images/paymethods.png";
+import { FaLinkedin, FaLocationArrow, FaTwitter } from "react-icons/fa6";
+import { RiWhatsappFill } from "react-icons/ri";
+import { IoIosMail } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -13,7 +16,7 @@ const Footer = () => {
         <div
           className={`max-w-[98%] p-[30px] md:p-[60px] bg-black rounded-t-[30px] md:rounded-t-[60px] lg:rounded-t-[90px] mx-auto `}
         >
-          <div className="text-white max-xl:max-w-[1204px]  xl:max-w-[1620px] mx-auto  flex flex-col">
+          <div className="text-white max-xl:max-w-[1204px]  xl:max-w-[1620px] mx-auto  flex flex-col lg:flex-row">
             {/* === */}
             <div className="border lg:w-4/12 flex flex-col items-start gap-6">
               <div className="cursor-pointer rounded-lg bg-blue-600 py-2 px-8 w-auto ">
@@ -29,8 +32,123 @@ const Footer = () => {
                 <CustomImage src={paymethods} className="w-full h-full" />
               </div>
             </div>
-            <div className="border lg:w-6/12"> div</div>
-            <div className="border lg:w-4/12"> div</div>
+            <div className="border lg:w-6/12 grid grid-cols-3">
+              <div className="border w-full">
+                <PrimaryHeading heading={"Home"} className="mb-4" />
+                <SecondaryDescription
+                  description={"Overview"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Features"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Process"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Comparison"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Pricing"}
+                  className="text-white "
+                />
+              </div>
+              <div className="border w-full">
+                <PrimaryHeading heading={"Company"} className="mb-4" />
+                <SecondaryDescription
+                  description={"About us"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Our team"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"How to Use"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"FAQ’s"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Testimonials"}
+                  className="text-white "
+                />
+              </div>
+              <div className="border w-full">
+                <PrimaryHeading heading={"All Pages"} className="mb-4" />
+                <SecondaryDescription
+                  description={"Home"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Waitlist"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Blogs"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Contact"}
+                  className="text-white "
+                />
+                <SecondaryDescription
+                  description={"Changelog"}
+                  className="text-white "
+                />
+              </div>
+            </div>
+            <div className="border lg:w-4/12 flex flex-col gap-4">
+              <PrimaryHeading heading={"Social Profiles"} className="" />
+              <div className=" flex items-center gap-2">
+                <div
+                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  style={{
+                    backgroundColor: "#3A3A3A",
+                  }}
+                >
+                  <FaLinkedin size={34} />
+                </div>
+                <div
+                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  style={{
+                    backgroundColor: "#3A3A3A",
+                  }}
+                >
+                  <RiWhatsappFill size={34} />
+                </div>
+                <div
+                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  style={{
+                    backgroundColor: "#3A3A3A",
+                  }}
+                >
+                  <FaTwitter size={34} />
+                </div>
+                <div
+                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  style={{
+                    backgroundColor: "#3A3A3A",
+                  }}
+                >
+                  <IoIosMail size={34} />
+                </div>
+                <div
+                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  style={{
+                    backgroundColor: "#3A3A3A",
+                  }}
+                >
+                  <FaLocationArrow size={34} />
+                </div>
+              </div>
+              <input placeholder="Enter Your Email" className="border h-12 w-full rounded-md ps-4 font-mb-regular" />
+            </div>
           </div>
         </div>
       </div>
