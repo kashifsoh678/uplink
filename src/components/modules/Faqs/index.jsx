@@ -37,7 +37,7 @@ const FAQS = () => {
         className="border p-5 md:p-6 lg:p-10 flex flex-col gap-4 md:gap-5 lg:gap-6"
         style={{
           background:
-            "transparent url('img/Rectangle 2000.png') 0% 0% no-repeat padding-box",
+            "transparent url('') 0% 0% no-repeat padding-box",
           boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029",
           borderRadius: "28px",
         }}

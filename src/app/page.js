@@ -16,21 +16,20 @@ import majestic_powered_by from "../../public/assets/svg/majestic_powered_by.svg
 
 import PrimaryHeading from "@/components/typography/primary-heading";
 import { FaRegClock } from "react-icons/fa6";
-import { FaqsDataArray, WhyUplinkDataArray } from "@/utils/constants";
+import {
+  ClientReviewsArray,
+  FaqsDataArray,
+  WhyUplinkDataArray,
+} from "@/utils/constants";
 import FAQS from "@/components/modules/Faqs";
-import AnimationProviderContainer from "@/components/common/animation/animation-container";
+import CustomSwiperControl from "@/components/common/swiper/custom-swiper-control";
+import ReviewCard from "@/components/common/cards/review-card";
+import About from "@/components/modules/About";
+import PortfolioDetailCard from "@/components/common/cards/portfolio-detail-card";
+import PortfolioCard from "@/components/common/cards/portfolio-card";
 export default function Home() {
   return (
     <>
-      {/* <LayoutProvider
-                parentClassName={" border bg-white h-full p-5 relative bg-[url(https://i.pinimg.com/736x/5a/b3/82/5ab3824f68c7fbe483858715447e3b81.jpg)]"}
-                childClassName={"p-5 rounded-md h-[500px] w-full bg-white/30 backdrop-blur-lg border"}
-            > */}
-      {/* <div className="border h-20">home w</div>
-                <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
-                <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div> */}
-      {/* </LayoutProvider> */}
-
       <LayoutProvider parentClassName={"bg-[#FFFFFF] h-full p-5 relative "}>
         <div className="flex flex-col md:flex-row gap-4  ">
           <div className="border w-full flex flex-col  gap-4 md:gap-6  lg:gap-8 justify-center ">
@@ -133,6 +132,63 @@ export default function Home() {
         <div className="flex items-center justify-center gap-8 flex-wrap"></div>
       </LayoutProvider>
 
+      {/* ============================================================================= Portfolio */}
+
+      <LayoutProvider
+        parentClassName={" border w-full relative "}
+        childClassName={"border w-full pb-8"}
+      >
+        <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto ">
+          <PrimaryHeading
+            heading={"Our Portfolio"}
+            className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold text-center"
+          />
+          <PrimaryDescription
+            description={
+              "Choosing SEO Flox Means Partnering With An SEO Team Dedicated To Your Growth And Lasting Online Success."
+            }
+            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl border"
+          />
+        </div>
+
+        <div className="bg-portfolio_background bg-cover bg-center bg-no-repeat w-full">
+          <div className=" flex flex-col xl:flex-row gap-10 bg-white/30 backdrop-blur-lg  ">
+          
+            <div className=" flex max-xl:flex-wrap xl:flex-col justify-center gap-4">
+              <PortfolioCard
+                src="/assets/images/domain-authority.png"
+                width={40}
+              />
+              <PortfolioCard src="/assets/images/dns.png" />
+              <PortfolioCard
+                src="/assets/images/backlink.png"
+                width={40}
+                CustomStyle={{
+                  backgroundColor: "#084FDC",
+                  boxShadow: "none",
+                }}
+              />
+              <PortfolioCard src="/assets/images/backlinks.png" width={40} />
+              <PortfolioCard
+                src="/assets/images/seo-search-symbol.png"
+                width={50}
+              />
+            </div>
+            {/* === */}
+            <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full ">
+              <PortfolioDetailCard />
+              <PortfolioDetailCard />
+              <PortfolioDetailCard />
+              <PortfolioDetailCard />
+              <PortfolioDetailCard />
+              <PortfolioDetailCard />
+              <PortfolioDetailCard />
+              <PortfolioDetailCard />
+              <PortfolioDetailCard />
+            </div>
+          </div>
+        </div>
+      </LayoutProvider>
       {/* ============================================================================= Why */}
       <LayoutProvider
         parentClassName={"px-5 border w-full "}
@@ -177,41 +233,34 @@ export default function Home() {
         </div>
       </LayoutProvider>
       {/* ============================================================================= About */}
+      <About />
+      {/* ============================================================================= Review */}
       <LayoutProvider
-        parentClassName={"px-5 border w-full "}
-        childClassName={
-          "border flex flex-col max-md:gap-4  md:flex-row my-[20px] md:my-[30px] lg:my-[50px]"
-        }
+        parentClassName={" border w-full "}
+        childClassName={"border"}
       >
-        <div className="border w-full flex flex-col gap-4 lg:gap-8 justify-center">
+        {/* ===header */}
+        <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto">
           <PrimaryHeading
-            heading={"About Uplinks"}
-            className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold"
+            heading={"Client Reviews"}
+            className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold text-center"
           />
           <PrimaryDescription
-            description={
-              "Struggling to rank your website? Uplinke.com is here to help! We specialize in improving search rankings, boosting visibility, and driving organic traffic. Get noticed today!"
-            }
-            className="text-[#B5B5B5] font-mb-regular border"
-          />
-          <PrimaryDescription
-            description={
-              "Say goodbye to wasting money on ineffective backlinks and outdated SEO tactics! With our help, you can generate unlimited leads and elevate your website’s authority through genuine, organic strategies."
-            }
-            className="text-[#B5B5B5] font-mb-regular border"
-          />
-          <PrimaryDescription
-            description={
-              "Pay only for results! We charge only after achieving your satisfaction. Call us now to secure your success!"
-            }
-            className="text-[#B5B5B5] font-mb-regular border"
+            description={"We Have Worked with Individuals And Businesses."}
+            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl border"
           />
         </div>
-        <div className="border w-full">
-          <AnimationProviderContainer
-            animation={"assets/animations/about_anim.json"}
-          />
-        </div>
+        <CustomSwiperControl
+          slides={ClientReviewsArray ?? []}
+          slidesPerViewConfig={{ 640: 1, 768: 2, 1024: 3, 1280: 4 }}
+          loop={true}
+          cardComponent={ReviewCard}
+          customSwiperStyles={{
+            padding: "10px",
+          }}
+          customSwiperSlideStyles={{}}
+          spaceBetween={12}
+        />
       </LayoutProvider>
       {/* ============================================================================= Why */}
       <FAQS />

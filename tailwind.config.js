@@ -14,6 +14,7 @@ module.exports = {
       backgroundImage: {
         main_home_reviews: 'url("/assets/images/main_home_reviews.png")',
         home_background: 'url("/assets/images/home_background.png")',
+        portfolio_background: 'url("/assets/svg/portfolio_bg.svg")',
       },
     },
   },

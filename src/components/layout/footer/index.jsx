@@ -16,9 +16,9 @@ const Footer = () => {
         <div
           className={`max-w-[98%] p-[30px] md:p-[60px] bg-black rounded-t-[30px] md:rounded-t-[60px] lg:rounded-t-[90px] mx-auto `}
         >
-          <div className="text-white max-xl:max-w-[1204px]  xl:max-w-[1620px] mx-auto  flex flex-col lg:flex-row">
+          <div className="text-white max-xl:max-w-[1204px]  xl:max-w-[1620px] mx-auto  flex flex-col max-lg:gap-4 lg:flex-row">
             {/* === */}
-            <div className="border lg:w-4/12 flex flex-col items-start gap-6">
+            <div className=" lg:w-4/12 flex flex-col items-start gap-6 lg:pe-8">
               <div className="cursor-pointer rounded-lg bg-blue-600 py-2 px-8 w-auto ">
                 <PrimaryHeading heading={"Uplinke"} className={"text-white"} />
               </div>
@@ -28,12 +28,13 @@ const Footer = () => {
                 }
                 className="text-white leading-5"
               />
-              <div className="bg-white rounded-md overflow-hidden max-h-[65px]">
+              <div className="bg-white rounded-md overflow-hidden max-h-[65px] flex items-center justify-center">
                 <CustomImage src={paymethods} className="w-full h-full" />
               </div>
             </div>
-            <div className="border lg:w-6/12 grid grid-cols-3">
-              <div className="border w-full">
+            {/* ================ */}
+            <div className=" lg:w-6/12 grid grid-cols-1  md:grid-cols-3 px-3 gap-2">
+              <div className=" w-full flex flex-col gap-2 max-lg:items-center">
                 <PrimaryHeading heading={"Home"} className="mb-4" />
                 <SecondaryDescription
                   description={"Overview"}
@@ -56,7 +57,7 @@ const Footer = () => {
                   className="text-white "
                 />
               </div>
-              <div className="border w-full">
+              <div className=" w-full flex flex-col gap-2 max-lg:items-center">
                 <PrimaryHeading heading={"Company"} className="mb-4" />
                 <SecondaryDescription
                   description={"About us"}
@@ -79,7 +80,7 @@ const Footer = () => {
                   className="text-white "
                 />
               </div>
-              <div className="border w-full">
+              <div className=" w-full flex flex-col gap-2 max-lg:items-center">
                 <PrimaryHeading heading={"All Pages"} className="mb-4" />
                 <SecondaryDescription
                   description={"Home"}
@@ -103,11 +104,12 @@ const Footer = () => {
                 />
               </div>
             </div>
-            <div className="border lg:w-4/12 flex flex-col gap-4">
+            {/* ================ */}
+            <div className=" lg:w-4/12 flex flex-col gap-4">
               <PrimaryHeading heading={"Social Profiles"} className="" />
-              <div className=" flex items-center gap-2">
+              <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 ">
                 <div
-                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  className="flex items-center justify-center p-[10px]  rounded-md shadow-sm "
                   style={{
                     backgroundColor: "#3A3A3A",
                   }}
@@ -115,7 +117,7 @@ const Footer = () => {
                   <FaLinkedin size={34} />
                 </div>
                 <div
-                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  className="flex items-center justify-center p-[10px]  rounded-md shadow-sm "
                   style={{
                     backgroundColor: "#3A3A3A",
                   }}
@@ -123,7 +125,7 @@ const Footer = () => {
                   <RiWhatsappFill size={34} />
                 </div>
                 <div
-                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  className="flex items-center justify-center p-[10px]  rounded-md shadow-sm "
                   style={{
                     backgroundColor: "#3A3A3A",
                   }}
@@ -131,15 +133,15 @@ const Footer = () => {
                   <FaTwitter size={34} />
                 </div>
                 <div
-                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  className="flex items-center justify-center p-[10px]  rounded-md shadow-sm "
                   style={{
                     backgroundColor: "#3A3A3A",
                   }}
                 >
-                  <IoIosMail size={34} />
+                  <IoIosMail size={42} />
                 </div>
                 <div
-                  className="flex item' justify-center p-[10px] rounded-md shadow-sm "
+                  className="flex items-center justify-center p-[10px]  rounded-md shadow-sm "
                   style={{
                     backgroundColor: "#3A3A3A",
                   }}
@@ -147,7 +149,13 @@ const Footer = () => {
                   <FaLocationArrow size={34} />
                 </div>
               </div>
-              <input placeholder="Enter Your Email" className="border h-12 w-full rounded-md ps-4 font-mb-regular" />
+              <input
+                placeholder="Enter Your Email"
+                className=" h-12 w-full rounded-md ps-4 font-mb-regular text-black"
+              />
+              <button className="bg-[#3A3A3A] h-12 w-full rounded-md font-mb-bold text-lg">
+                Sign up
+              </button>
             </div>
           </div>
         </div>
