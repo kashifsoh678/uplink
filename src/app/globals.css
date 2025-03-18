@@ -31,18 +31,23 @@ body {
 }
 
 .animate {
-  animation: rotation 1s linear 1; /* Runs once */
+  animation: rotation 1s linear 1;
+  /* Runs once */
 }
 
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
+.bg-linear-clr {
+  background-image: linear-gradient(180deg, rgba(247, 250, 252, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
 
 @layer utilities {
   .text-balance {

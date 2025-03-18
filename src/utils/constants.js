@@ -250,3 +250,41 @@ export const ClientReviewsArray = [
     },
   ],
 ];
+export const blackLinkServiceArray = [
+  [
+    {
+      src: "/assets/svg/logo1.svg",
+      imgProps: {
+        width: 80,
+        height: 100,
+      },
+    },
+  ],
+  [
+    {
+      src: "/assets/svg/logo2.svg",
+      imgProps: {
+        width: 80,
+        height: 100,
+      },
+    },
+  ],
+  [
+    {
+      src: "/assets/svg/logo3.svg",
+      imgProps: {
+        width: 80,
+        height: 100,
+      },
+    },
+  ],
+  [
+    {
+      src: "/assets/svg/logo4.svg",
+      imgProps: {
+        width: 80,
+        height: 100,
+      },
+    },
+  ],
+]
