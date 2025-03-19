@@ -16,6 +16,7 @@ import LayoutProvider from "@/components/wrapper/layout-provider";
 import {
   blackLinkServiceArray,
   ClientReviewsArray,
+  priceCards,
   WhyUplinkDataArray
 } from "@/utils/constants";
 import { FaRegClock } from "react-icons/fa6";
@@ -41,59 +42,18 @@ import main_home_trust_pilot from "../../public/assets/svg/main_home_trust_pilot
 import majestic_powered_by from "../../public/assets/svg/majestic_powered_by.svg";
 import moz_powered_by from "../../public/assets/svg/moz_powered_by.svg";
 import semrush_powered_by from "../../public/assets/svg/semrush_powered_by.svg";
+import logo1 from "../../public/assets/svg/logo1.svg";
+import logo2 from "../../public/assets/svg/logo2.svg";
+import logo3 from "../../public/assets/svg/logo3.svg";
+import logo4 from "../../public/assets/svg/logo4.svg";
 export default function Home() {
   const serviceList = [
     { id: 1, heading: "Ethical and Safe:", description: "Avoid penalties with white-hat techniques that focus on long term benefits." },
     { id: 2, heading: "Builds Authority:", description: "High-quality backlinks boost your site’s reputation in the eyes of search engines and users alike." },
     { id: 3, heading: "Drives Consistent Traffic:", description: "Organic links help maintain steady visitor growth,enhancing both visibility and engagement." },
   ];
-  const priceCards = [
-    {
-      id: 1,
-      title: "Basic",
-      rating: "DR 50+, DA 30+",
-      description:
-        "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
-      price: "$50 USD",
-      subDescriptions: [
-        "Ahrefs Domain rating 50+",
-        "Off-page strategy",
-        "Backlinks analysis",
-        "100% Guaranteed",
-      ],
-      BtnTitle: "Delivery time 15 days"
-    },
-    {
-      id: 2,
-      title: "Basic",
-      rating: "DR 50+, DA 30+",
-      description:
-        "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
-      price: "$50 USD",
-      subDescriptions: [
-        "Ahrefs Domain rating 50+",
-        "Off-page strategy",
-        "Backlinks analysis",
-        "100% Guaranteed",
-      ],
-      BtnTitle: "Delivery time 15 days"
-    },
-    {
-      id: 3,
-      title: "Basic",
-      rating: "DR 50+, DA 30+",
-      description:
-        "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
-      price: "$50 USD",
-      subDescriptions: [
-        "Ahrefs Domain rating 50+",
-        "Off-page strategy",
-        "Backlinks analysis",
-        "100% Guaranteed",
-      ],
-      BtnTitle: "Delivery time 15 days"
-    },
-  ];
+
+  const LogoItems = [logo1, logo2, logo3, logo4];
   const companyLogo = [bitcoin, wise, tetherLogo, stripe, payoneer, paypal, bank, binance];
   return (
     <>
@@ -197,6 +157,19 @@ export default function Home() {
         childClassName={"border"}
       >
         <div className="flex flex-wrap items-center justify-center gap-8"></div>
+        <div className="w-full lg:w-1/3 m-auto">
+          <CustomSwiperControl
+            slides={blackLinkServiceArray ?? []}
+            slidesPerViewConfig={{ 640: 1, 768: 2, 1024: 4, 1280: 4 }}
+            loop={true}
+            cardComponent={BlackLinkImgCard}
+            customSwiperStyles={{
+              padding: "10px",
+            }}
+            customSwiperSlideStyles={{}}
+            spaceBetween={12}
+          />
+        </div>
         <div className="p-5 bg-linear-clr rounder-lg">
           <div className="flex flex-col lg:flex-row">
             <div className="w-full lg:w-3/5">
@@ -235,20 +208,12 @@ export default function Home() {
               />
             </div>
           </div>
-          <div>
-            <CustomSwiperControl
-              slides={blackLinkServiceArray ?? []}
-              slidesPerViewConfig={{ 640: 1, 768: 2, 1024: 3, 1280: 4 }}
-              loop={true}
-              cardComponent={BlackLinkImgCard}
-              customSwiperStyles={{
-                padding: "10px",
-              }}
-              customSwiperSlideStyles={{}}
-              spaceBetween={12}
-            />
-
+          <div className="flex flex-wrap justify-center w-full my-5 space-x-2">
+            {LogoItems.map((icon, index) => (
+              <CustomImage key={index} src={icon} className="w-[200px] h-auto object-contain" />
+            ))}
           </div>
+
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {priceCards.map((card) => (
               <div key={card.id} className="relative">
@@ -280,6 +245,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+
           <div className="-mt-[50px] hidden lg:block">
             <CustomImage src={attachLines} className="w-[80%] h-auto m-auto" />
           </div>
@@ -314,7 +280,7 @@ export default function Home() {
           {companyLogo.map((icon, index) => (
             <CustomImage key={index} src={icon} className="w-[150px] h-20 object-contain" />
           ))}
-        </div>;
+        </div>
       </LayoutProvider>
 
       {/* ============================================================================= Portfolio */}

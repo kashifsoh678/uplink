@@ -253,38 +253,74 @@ export const ClientReviewsArray = [
 export const blackLinkServiceArray = [
   [
     {
-      src: "/assets/svg/logo1.svg",
-      imgProps: {
-        width: 80,
-        height: 100,
-      },
+      src: "/assets/svg/domain-authority.svg",
+      text: "Monthly SEO",
     },
   ],
   [
     {
-      src: "/assets/svg/logo2.svg",
-      imgProps: {
-        width: 80,
-        height: 100,
-      },
+      src: "/assets/svg/domain-authority.svg",
+      text: "Organic Backlinks",
     },
   ],
   [
     {
-      src: "/assets/svg/logo3.svg",
-      imgProps: {
-        width: 80,
-        height: 100,
-      },
+      src: "/assets/svg/domain-authority.svg",
+      text: "Domain Authority",
     },
   ],
   [
     {
-      src: "/assets/svg/logo4.svg",
-      imgProps: {
-        width: 80,
-        height: 100,
-      },
+      src: "/assets/svg/domain-authority.svg",
+      text: "Guest Post Outreach",
     },
   ],
 ]
+
+export const priceCards = [
+  {
+    id: 1,
+    title: "Basic",
+    rating: "DR 50+, DA 30+",
+    description:
+      "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
+    price: "$50 USD",
+    subDescriptions: [
+      "Ahrefs Domain rating 50+",
+      "Off-page strategy",
+      "Backlinks analysis",
+      "100% Guaranteed",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+  {
+    id: 2,
+    title: "Basic",
+    rating: "DR 50+, DA 30+",
+    description:
+      "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
+    price: "$50 USD",
+    subDescriptions: [
+      "Ahrefs Domain rating 50+",
+      "Off-page strategy",
+      "Backlinks analysis",
+      "100% Guaranteed",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+  {
+    id: 3,
+    title: "Basic",
+    rating: "DR 50+, DA 30+",
+    description:
+      "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
+    price: "$50 USD",
+    subDescriptions: [
+      "Ahrefs Domain rating 50+",
+      "Off-page strategy",
+      "Backlinks analysis",
+      "100% Guaranteed",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+];
