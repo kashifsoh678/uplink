@@ -194,7 +194,7 @@ export default function Home() {
         </div>
 
         {/* Render Slide */}
-        <div className="p-10 bg-linear-clr bg-shadow-clr rounded-[28px]" style={{ boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029" }}>{renderSlide()}</div>
+        <div className="p-10 bg-linear-clr  rounded-[28px]" style={{ boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029" }}>{renderSlide()}</div>
         <div className="flex flex-wrap justify-center w-full mt-5 space-x-2">
           {companyLogo.map((icon, index) => (
             <CustomImage
