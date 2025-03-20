@@ -12,10 +12,10 @@ import SecondaryDescription from "@/components/typography/secondary-description"
 import SecondaryHeading from "@/components/typography/secondary-heading";
 import { postPriceCards, priceCards } from "@/utils/constants";
 import SimpleButton from "@/components/common/button/simple-button";
-import logo1 from "../../public/assets/svg/logo1.svg";
-import logo2 from "../../public/assets/svg/logo2.svg";
-import logo3 from "../../public/assets/svg/logo3.svg";
-import logo4 from "../../public/assets/svg/logo4.svg";
+import logo1 from "../../public/assets/images/logo1.jpg";
+import logo2 from "../../public/assets/images/logo2.jpg";
+import logo3 from "../../public/assets/images/logo3.jpg";
+import logo4 from "../../public/assets/images/logo4.jpg";
 const SecondSlide = () => {
   const serviceList = [
     {

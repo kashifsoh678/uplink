@@ -9,10 +9,10 @@ import clapping from "../../public/assets/images/clapping.png";
 import telegram from "../../public/assets/images/telegram.png";
 import attachLines from "../../public/assets/svg/attach-lines.svg";
 import circle from "../../public/assets/svg/circle.svg";
-import logo1 from "../../public/assets/svg/logo1.svg";
-import logo2 from "../../public/assets/svg/logo2.svg";
-import logo3 from "../../public/assets/svg/logo3.svg";
-import logo4 from "../../public/assets/svg/logo4.svg";
+import logo1 from "../../public/assets/images/logo1.jpg";
+import logo2 from "../../public/assets/images/logo2.jpg";
+import logo3 from "../../public/assets/images/logo3.jpg";
+import logo4 from "../../public/assets/images/logo4.jpg";
 const FirstSlide = () => {
   const serviceList = [
     {
