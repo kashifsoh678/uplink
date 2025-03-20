@@ -78,7 +78,7 @@ export default function Home() {
   ];
   return (
     <>
-      <LayoutProvider parentClassName={"bg-[#FFFFFF] h-full p-5 relative "}>
+      <LayoutProvider parentClassName={"bg-[#FFFFFF] h-full p-5 relative  bg-home_background bg-cover bg-center bg-no-repeat"}>
         <div className="flex flex-col gap-4 md:flex-row ">
           <div className="flex flex-col justify-center w-full gap-4  md:gap-6 lg:gap-8 ">
             <div>
@@ -173,11 +173,13 @@ export default function Home() {
       {/* ============================================================================= */}
       <LayoutProvider
         parentClassName={
-          "p-5 bg-home_background bg-cover bg-center bg-no-repeat min-h-[500px] md:min-h-screen w-full "
+          "  bg-home_background bg-contain  bg-no-repeat relative min-h-[500px] md:min-h-screen w-full "
         }
-        childClassName={""}
+        childClassName={"border "}
       >
-        <div className="flex flex-wrap items-center justify-center gap-8"></div>
+      
+
+        <div className="flex flex-wrap items-center justify-center gap-8 "></div>
 
         <div className="flex justify-center space-x-4 mb-5">
           {blackLinkServiceArray.map((item) => (
@@ -192,9 +194,13 @@ export default function Home() {
             </div>
           ))}
         </div>
+       
 
         {/* Render Slide */}
-        <div className="p-10 bg-linear-clr  rounded-[28px]" style={{ boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029" }}>{renderSlide()}</div>
+        <div className="p-10 bg-linear-clr  rounded-[28px] !bg-transparent" style={{ boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029" }}>{renderSlide()}</div>
+        
+
+        
         <div className="flex flex-wrap justify-center w-full mt-5 space-x-2">
           {companyLogo.map((icon, index) => (
             <CustomImage
@@ -204,6 +210,7 @@ export default function Home() {
             />
           ))}
         </div>
+
       </LayoutProvider>
 
       {/* ============================================================================= Portfolio */}
@@ -225,8 +232,8 @@ export default function Home() {
           />
         </div>
 
-        <div className="w-full bg-center bg-no-repeat bg-cover bg-portfolio_background">
-          <div className="flex flex-col gap-10 xl:flex-row bg-white/30 backdrop-blur-lg">
+        <div className="w-full bg-center bg-no-repeat bg-fixed bg-portfolio_background">
+          <div className="flex flex-col gap-10 xl:flex-row bg-white/50 backdrop-blur-lg">
             <div className="flex justify-center gap-4 max-xl:flex-wrap xl:flex-col">
               <PortfolioCard
                 src="/assets/images/domain-authority.png"

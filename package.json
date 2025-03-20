@@ -14,7 +14,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.5.0",
-    "swiper": "^11.2.5"
+    "reusify": "^1.1.0",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "eslint": "^8",

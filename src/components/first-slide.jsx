@@ -7,6 +7,9 @@ import SecondaryHeading from "@/components/typography/secondary-heading";
 import { priceCards } from "@/utils/constants";
 import clapping from "../../public/assets/images/clapping.png";
 import telegram from "../../public/assets/images/telegram.png";
+import linkedin from "../../public/assets/images/linkedin.png";
+import message from "../../public/assets/images/message.png";
+import whatsapp from "../../public/assets/images/whatsapp.png";
 import attachLines from "../../public/assets/svg/attach-lines.svg";
 import circle from "../../public/assets/svg/circle.svg";
 import logo1 from "../../public/assets/images/logo1.jpg";
@@ -138,20 +141,28 @@ const FirstSlide = () => {
 
       <div className="flex flex-col items-center justify-between w-full p-6 mt-5 space-y-3 lg:flex-row lg:space-y-0 lg:space-x-4">
         <div className="w-full text-center lg:w-1/5 lg:text-left">
-          <PrimaryHeading heading="Place Your Order Via" />
+          <PrimaryHeading heading="Place Your Order Via" className={"!text-4xl"} />
         </div>
 
         <div className=" w-28 h-0.5 bg-gray-400"></div>
-        <div className="flex justify-center w-full space-x-3 lg:w-1/5">
-          <CustomImage src={telegram} className="w-[50px] h-[50px]" />
-          <CustomImage src={telegram} className="w-[50px] h-[50px]" />
-          <CustomImage src={telegram} className="w-[50px] h-[50px]" />
+        <div className="flex items-center justify-center w-full space-x-3 lg:w-1/5">
+          <CustomImage src={linkedin} className="w-[50px] h-[50px]" />
+          <div className="border w-[50px] h-[50px] p-2 rounded-lg bg-[#9A9A9A]">
+          <CustomImage src={message} className=" w-full h-full " />
+          </div>
+          <CustomImage src={whatsapp} className="w-[50px] h-[50px] " />
           <CustomImage src={telegram} className="w-[50px] h-[50px]" />
         </div>
 
         <div className=" w-28 h-0.5 bg-gray-400"></div>
         <div className="w-full text-center lg:w-1/5 lg:text-left">
           <SecondaryDescription description="Directly send message to us" />
+             <div className="border rounded-full flex items-center justify-between  p-2">
+              <SecondaryDescription description="I want your services" className={"!text-sm ml-2"}/>
+              <div className="bg-[#32CD21] py-2 px-4 rounded-full">
+              <SecondaryDescription description="send" className="!text-sm" />
+              </div>
+          </div>
         </div>
       </div>
       <div className="text-center">
