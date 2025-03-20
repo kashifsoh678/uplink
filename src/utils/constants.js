@@ -281,45 +281,199 @@ export const priceCards = [
   {
     id: 1,
     title: "Basic",
-    rating: "DR 50+, DA 30+",
+    rating: "DR 50+,",
     description:
-      "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
+      "Ideal for newer or smaller websites seeking initial improvements in authority and visibility.",
     price: "$50 USD",
     subDescriptions: [
-      "Ahrefs Domain rating 50+",
-      "Off-page strategy",
-      "Backlinks analysis",
+      "Foundational Link-Building",
+      "Basic Monitoring",
+      "10+ Backlink",
       "100% Guaranteed",
     ],
-    BtnTitle: "Delivery time 15 days"
+    BtnTitle: "Delivery Time: 15 Days"
   },
   {
     id: 2,
-    title: "Basic",
-    rating: "DR 50+, DA 30+",
+    title: " Growth",
+    rating: "DR 60+",
     description:
-      "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
-    price: "$50 USD",
+      "Perfect for websites looking to scale their authority and outrank mid-level competitors.",
+    price: "$100 USD",
     subDescriptions: [
-      "Ahrefs Domain rating 50+",
-      "Off-page strategy",
-      "Backlinks analysis",
-      "100% Guaranteed",
+      "Extended Outreach Backlinks",
+      "In-Depth Monthly Reports",
+      "Yes, up to Target Metrics",
+      "40+ backlinks",
+      "100% GUARANTEED"
     ],
     BtnTitle: "Delivery time 15 days"
   },
   {
     id: 3,
-    title: "Basic",
-    rating: "DR 50+, DA 30+",
+    title: " Domination",
+    rating: "DR 70+, DA 40+",
     description:
-      "Increasing Moz's Domain authority (DA) organically requires a focused strategy on building high quality backlinks from reputable websites.",
-    price: "$50 USD",
+      "Best for established sites in competitive niches aiming to dominate search rankings and maintain top-tier authority.",
+    price: "$250 USD",
     subDescriptions: [
-      "Ahrefs Domain rating 50+",
+      "100+ Premium Links",
       "Off-page strategy",
-      "Backlinks analysis",
-      "100% Guaranteed",
+      "Comprehensive Monthly Reports",
+      "Competitor Analysis",
+      "Competitor Outrank Strategies",
+      "100% GUARANTEED",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+];
+export const postPriceCards = [
+  {
+    id: 1,
+    title: "Basic",
+    rating: "40+ Backlinks",
+    description:
+      "40+ manual high quality Seo backlinks white hat link building",
+    price: "$200 USD",
+    subDescriptions: [
+      "Foundational, Context-Based",
+      "Industry Relevancy",
+      "DR 40+ Backlinks",
+      "Basic Monthly Monitoring",
+      "Contextual Placement",
+    ],
+    BtnTitle: "Delivery Time: 15 Days"
+  },
+  {
+    id: 2,
+    title: "Growth Package",
+    rating: "100+ Backlinks+",
+    description:
+      "100+ manual high quality Seo backlinks white hat link building",
+    price: "$350 USD",
+    subDescriptions: [
+      "Off-page strategy",
+      "Expanded Multiple Niche Sites",
+      "DR 50+ Backlinks",
+      "High (Broader Range of Relevant Publishers)",
+      "In-Depth Link Metrics & Analysis",
+      "100% improvement in link profile",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+  {
+    id: 3,
+    title: "Domination Package",
+    rating: "150+ Backlinks",
+    description:
+      "150+ manual high quality Seo backlinks white hat link building",
+    price: "$500 USD",
+    subDescriptions: [
+      "Premium Authoritative Sites",
+      "Highly Diversified & Strategically Planned",
+      "Very High (Niche-Specific, High-Authority Publishers)",
+      "Comprehensive Monthly Auditing & Competitor Checks",
+      "Established or Highly Competitive Niches",
+      "Competitor Comparison & Advanced Stats",
+      "Highly Diversified & Strategically Planned",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+];
+export const organicPriceCards = [
+  {
+    id: 1,
+    title: "Basic",
+    rating: "100 Backlinks",
+    description:
+      "New or smaller websites looking to establish initial authority",
+    price: "$250 USD",
+    subDescriptions: [
+      "100+ Organic Backlinks",
+      "Backlink analysis",
+      "Competitor Backlink Analysis",
+      "Quality Backlinks",
+    ],
+    BtnTitle: "Delivery Time: 15 Days"
+  },
+  {
+    id: 2,
+    title: "Growth Package",
+    rating: "250+ Backlinks+",
+    description:
+      "Websites with some authority seeking stronger rankings and traffic",
+    price: "$500 USD",
+    subDescriptions: [
+      "250+ Organic Backlinks",
+      "Brand Identity,Business Citations",
+      "In-Depth (Compares competitor link profiles & opportunities)",
+      "Competitor Backlink Analysis",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+  {
+    id: 3,
+    title: "Domination Package",
+    rating: "500+ Backlinks",
+    description:
+      "Established sites or competitive niches aiming for top-tier dominance",
+    price: "$800 USD",
+    subDescriptions: [
+      "500+ Organic Backlinks",
+      "Advanced (High-value community networks)",
+      "Comprehensive (Competitor link audit, outrank strategies) Advanced (Diverse anchor text,",
+      "premium guest posts, high-authority targets)",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+];
+export const seoPriceCards = [
+  {
+    id: 1,
+    title: "Basic",
+    rating: "100 Backlinks",
+    description:
+      "New or smaller websites looking to establish initial authority",
+    price: "$350 USD",
+    subDescriptions: [
+      "Increase DR 60+",
+      "50+ Guest Post Backlink",
+      "100+ Organic Backlinks",
+      "Competitor Backlink Analysis",
+      "Quality Backlinks",
+    ],
+    BtnTitle: "Delivery Time: 15 Days"
+  },
+  {
+    id: 2,
+    title: "Growth Package",
+    rating: "300+ Backlinks+",
+    description:
+      "Websites with some authority seeking stronger rankings and traffic",
+    price: "$300 USD",
+    subDescriptions: [
+      "Increase DR 70+",
+      "100+ Guest Post Backlink",
+      "200+ Organic Backlinks",
+      "In-Depth (Compares competitor link profiles & opportunities)",
+      "Competitor Backlink Analysis",
+    ],
+    BtnTitle: "Delivery time 15 days"
+  },
+  {
+    id: 3,
+    title: "Domination Package",
+    rating: "450+ Backlinks",
+    description:
+      "Established sites or competitive niches aiming for top-tier dominance",
+    price: "$1000 USD",
+    subDescriptions: [
+      "Increase DR 75+",
+      "150+ Guest Post Backlink",
+      "300+ Organic Backlinks",
+      "Advanced (High-value community networks)",
+      "Comprehensive (Competitor link audit, outrank strategies)",
+      "Advanced (Diverse anchor text, premium guest posts, high-authority targets)",
     ],
     BtnTitle: "Delivery time 15 days"
   },

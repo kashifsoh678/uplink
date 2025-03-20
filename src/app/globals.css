@@ -54,3 +54,8 @@ body {
     text-wrap: balance;
   }
 }
+
+.bg-shadow-clr {
+  background-image: url('../../public/assets/svg/portfolio_bg.svg');
+  background-size: cover;
+}

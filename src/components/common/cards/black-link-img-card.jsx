@@ -13,7 +13,7 @@ const BlackLinkImgCard = ({ data = [0, 0, 0], onClick }) => {
                         <div
                             key={index}
                             className="shadow-lg w-[80px] p-2.5 flex flex-col items-center justify-center flex-1"
-                            onClick={() => onClick(item)}  >
+                            onClick={() => onClick(item, index)}  >
                             <CustomImage
                                 src={img ?? "/assets/images/google_review.png"}
                                 width={item?.imgProps?.width ?? 20}
