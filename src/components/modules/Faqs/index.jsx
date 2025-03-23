@@ -20,7 +20,7 @@ const FAQS = () => {
   return (
     <LayoutProvider parentClassName={"border w-full"} childClassName={"border"}>
       {/* ===header */}
-      <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto">
+      <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto" data-aos="fade-up">
         <PrimaryHeading
           heading={"Frequently Asked Questions"}
           className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold text-center"
@@ -41,6 +41,7 @@ const FAQS = () => {
           boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029",
           borderRadius: "28px",
         }}
+        data-aos="fade-up"
       >
         {FaqsDataArray.map((faq, index) => (
           <div
@@ -61,9 +62,8 @@ const FAQS = () => {
               </span>
             </div>
             <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                openIndex === index ? "mt-8 max-h-[500px]" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "mt-8 max-h-[500px]" : "max-h-0"
+                }`}
             >
               <SecondaryDescription
                 description={faq.desc}

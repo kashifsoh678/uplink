@@ -16,7 +16,10 @@ import logo1 from "../../public/assets/images/logo1.jpg";
 import logo2 from "../../public/assets/images/logo2.jpg";
 import logo3 from "../../public/assets/images/logo3.jpg";
 import logo4 from "../../public/assets/images/logo4.jpg";
+import LogoCard from "./LogoCard";
 const SecondSlide = () => {
+  const bgColors = ["bg-[#DEFAD4]", "bg-[#FEE3D4]", "bg-[#CCF1FE]"];
+
   const serviceList = [
     {
       id: 1,
@@ -43,7 +46,7 @@ const SecondSlide = () => {
     <>
       {/* <div className="p-5 bg-linear-clr rounder-lg"> */}
       <div className="flex flex-col lg:flex-row">
-        <div className="w-full lg:w-3/5">
+        <div className="w-full lg:w-3/5" data-aos="fade-left">
           <MainHeading text={"Guest Post Contextual Backlinks"} />
           <SecondaryDescription
             description="We secure guest post placements on authoritative sites where your link naturally fits within relevant content. This builds credibility, attracts targeted visitors, and enhances your search rankings."
@@ -68,7 +71,7 @@ const SecondSlide = () => {
             ))}
           </ol>
         </div>
-        <div className="w-full lg:w-2/5">
+        <div className="w-full lg:w-2/5" data-aos="fade-right">
           <CustomImage
             src="/assets/images/backlinks-services.png"
             width={0}
@@ -77,43 +80,33 @@ const SecondSlide = () => {
           />
         </div>
       </div>
-      <div className="flex flex-wrap justify-center w-full my-5 space-x-2">
-        {LogoItems.map((icon, index) => (
-          <CustomImage
-            key={index}
-            src={icon}
-            className="w-[200px] h-auto object-contain"
-          />
-        ))}
-      </div>
+      <LogoCard />
 
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        {postPriceCards.map((card) => (
+
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-down">
+        {postPriceCards.map((card, index) => (
           <div key={card.id} className="relative">
-            <div className="absolute inset-0 left-0 w-full h-full bg-[#CCF1FE] rounded-lg opacity-30 -top-4"></div>
+            <div className={`absolute inset-0 left-0 w-full h-full rounded-[27px] opacity-30 -top-3 ${bgColors[index % bgColors.length]}`}></div>
             <div
-              className="relative h-full p-[42px] bg-white rounded-lg shadow-lg flex flex-col justify-between"
+              className="relative mx-[2px] h-full p-[42px] bg-white rounded-[27px] flex flex-col justify-between"
               style={{ boxShadow: "0px 8px 6px #00000029" }}
             >
               <div className="flex items-center gap-2">
                 <CustomImage src={clapping} className="w-[30px] h-auto" />
                 <PrimaryHeading heading={card.title} />
               </div>
-              <PrimaryHeading heading={card.rating} />
-              <SecondaryDescription
-                description={card.description}
-                className="mt-3"
-              />
-              <MainHeading text={card.price} className="my-5 " />
-
+              <div>
+                <PrimaryHeading heading={card.rating} />
+                <SecondaryDescription description={card.description} className="mt-3" />
+              </div>
+              <div>
+                <MainHeading text={card.price} className="my-5" />
+              </div>
               <div className="flex flex-col gap-2">
                 {card.subDescriptions.map((subDesc, index) => (
                   <div key={index} className="flex items-center">
                     <CustomImage src={circle} className="w-[10px] h-auto" />
-                    <SecondaryDescription
-                      description={subDesc}
-                      className="ml-2"
-                    />
+                    <SecondaryDescription description={subDesc} className="ml-2" />
                   </div>
                 ))}
               </div>
@@ -124,7 +117,6 @@ const SecondSlide = () => {
           </div>
         ))}
       </div>
-
       <div className="-mt-[50px] hidden lg:block">
         <CustomImage src={attachLines} className="w-[80%] h-auto m-auto" />
       </div>

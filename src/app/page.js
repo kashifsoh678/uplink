@@ -46,9 +46,9 @@ export default function Home() {
   };
   const blackLinkServiceArray = [
     { id: 0, src: "/assets/svg/domain-authority.svg", text: "Domain Authority" },
-    { id: 1, src: "/assets/svg/domain-authority.svg", text: "Guest Post Outreach" },
-    { id: 2, src: "/assets/svg/domain-authority.svg", text: "Organic Backlinks" },
-    { id: 3, src: "/assets/svg/domain-authority.svg", text: "Monthly SEO" },
+    { id: 1, src: "/assets/images/edit.png", text: "Guest Post Outreach" },
+    { id: 2, src: "/assets/images/backlinks.png", text: "Organic Backlinks" },
+    { id: 3, src: "/assets/images/search.png", text: "Monthly SEO" },
   ];
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -81,7 +81,7 @@ export default function Home() {
       <LayoutProvider parentClassName={"bg-[#FFFFFF] h-full p-5 relative  bg-home_background bg-cover bg-center bg-no-repeat"}>
         <div className="flex flex-col gap-4 md:flex-row ">
           <div className="flex flex-col justify-center w-full gap-4  md:gap-6 lg:gap-8 ">
-            <div>
+            <div data-aos="fade-left" >
               <MainHeading
                 text={"Uplinke AI"}
                 className={"max-md:text-center"}
@@ -95,13 +95,13 @@ export default function Home() {
                 className={"max-md:text-center"}
               />
             </div>
-            <PrimaryDescription
+            <PrimaryDescription data-aos="fade-left"
               description="Uplinke.com: Your partner for real online growth unlock your site’s potential with White Hat SEO and see results before you pay. Achieve digital success with Uplinke!"
               className={"max-md:text-center max-md:max-w-md max-md:mx-auto"}
             />
 
             {/* ================================== */}
-            <div className="">
+            <div className="" data-aos="fade-up">
               <div className="flex flex-wrap items-center gap-2 mb-2 max-md:justify-center">
                 <PrimaryDescription
                   description={"Based on 1,000 reviews"}
@@ -133,7 +133,7 @@ export default function Home() {
             {/* ================================== */}
           </div>
           {/* ============================= */}
-          <div className="w-full flex items-center justify-center p-4 md:h-[400px] lg:min-h-[600px] ">
+          <div className="w-full flex items-center justify-center p-4 md:h-[400px] lg:min-h-[600px] " data-aos="fade-right">
             <CustomImage
               src={main_home}
               className="object-contain w-full h-full"
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
         </div>
         {/* =============== */}
-        <div className="w-full">
+        <div className="w-full" data-aos="fade-up">
           <PrimaryHeading
             heading={"Powered By"}
             className="mb-2 text-center"
@@ -177,30 +177,37 @@ export default function Home() {
         }
         childClassName={"border "}
       >
-      
+
 
         <div className="flex flex-wrap items-center justify-center gap-8 "></div>
 
-        <div className="flex justify-center space-x-4 mb-5">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-5" data-aos="fade-up">
           {blackLinkServiceArray.map((item) => (
             <div
               key={item.id}
-              className={`p-3 flex flex-col gap-2.5 w-[110px] items-center border rounded-lg cursor-pointer ${activeSlide === item.id ? "bg-gray-200" : "bg-white"
+              className={`p-3 flex flex-col gap-2.5 w-[110px] items-center border rounded-lg cursor-pointer ${activeSlide === item.id ? "active-global-clr text-white" : "text-gray-400 bg-[#F4F4F5]"
                 }`}
               onClick={() => setActiveSlide(item.id)}
+              style={{ boxShadow: "0px 3px 6px #00000029", opacity: "1" }}
             >
-              <CustomImage src={item.src} className="w-[50px] h-[50px]" />
-              <p className="text-sm text-center font-semibold">{item.text}</p>
+              <CustomImage
+                src={item.src}
+                width={0}
+                height={0}
+                className={`w-[50px] h-[50px] transition-all ${activeSlide === item.id ? "filter invert brightness-0" : ""
+                  }`}
+              />
+              <p className="text-sm text-center font-semibold text-[16px]">{item.text}</p>
             </div>
           ))}
         </div>
-       
+
 
         {/* Render Slide */}
-        <div className="p-10 bg-linear-clr  rounded-[28px] !bg-transparent" style={{ boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029" }}>{renderSlide()}</div>
-        
+        <div className="px-5 py-10 lg:p-10 bg-linear-clr  rounded-[28px] !bg-transparent" style={{ boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029" }}>{renderSlide()}</div>
 
-        
+
+
         <div className="flex flex-wrap justify-center w-full mt-5 space-x-2">
           {companyLogo.map((icon, index) => (
             <CustomImage
@@ -275,7 +282,7 @@ export default function Home() {
         childClassName={"border"}
       >
         {/* ===header */}
-        <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto">
+        <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto" data-aos="fade-up">
           <PrimaryHeading
             heading={"Why Uplinks"}
             className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold text-center"
@@ -288,7 +295,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 ">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 " data-aos="fade-up">
           {WhyUplinkDataArray?.map((item, index) => (
             <div
               key={index}

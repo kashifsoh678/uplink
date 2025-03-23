@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import "../assets/fonts/index.css";
+import AosAnimation from "@/components/layout/aos-animation";
 
 export const metadata = {
   title: "UpLinke",
@@ -13,9 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">
-        <Header />
-        {children}
-        <Footer />
+        <AosAnimation>
+          <Header />
+          {children}
+          <Footer />
+        </AosAnimation>
       </body>
     </html>
   );
