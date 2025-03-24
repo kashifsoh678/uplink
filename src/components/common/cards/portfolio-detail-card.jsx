@@ -9,7 +9,6 @@ const PortfolioDetailCard = () => {
     <div
       className="px-6 py-5 flex flex-col gap-4 border border-transparent hover:border-[#CDD9EF] hover:cursor-pointer "
       style={{
-        background: "transparent 0% 0% no-repeat padding-box;",
         boxShadow: "inset 0px 3px 6px #00000029, 0px 3px 6px #00000029",
         borderRadius: "19px",
         opacity: 1,

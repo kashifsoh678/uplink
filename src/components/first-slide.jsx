@@ -44,7 +44,7 @@ const FirstSlide = () => {
   return (
     <>
       {/* <div className="p-5 bg-linear-clr rounder-lg"> */}
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row ">
         <div className="w-full lg:w-3/5" data-aos="fade-left">
 
           <MainHeading text={"Increase Domain Authority"} />
@@ -82,9 +82,9 @@ const FirstSlide = () => {
       </div>
       <LogoCard />
 
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-down">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3" >
         {priceCards.map((card, index) => (
-          <div key={card.id} className="relative">
+          <div key={card.id} className="relative" data-aos="flip-right">
             <div className={`absolute inset-0 left-0 w-full h-full rounded-[27px] opacity-30 -top-3 ${bgColors[index % bgColors.length]}`}></div>
             <div
               className="relative mx-[2px] h-full p-[42px] bg-white rounded-[27px] flex flex-col justify-between"
@@ -110,7 +110,7 @@ const FirstSlide = () => {
                 ))}
               </div>
               <div className="mt-5">
-                <SimpleButton BtnTitle={card.BtnTitle} />
+                <SimpleButton BtnTitle={card.BtnTitle}  />
               </div>
             </div>
           </div>
@@ -118,35 +118,38 @@ const FirstSlide = () => {
       </div>
 
 
-      <div className="-mt-[50px] hidden lg:block">
+      <div className="-mt-[50px] hidden lg:block -z-20 " >
         <CustomImage src={attachLines} className="w-[80%] h-auto m-auto" />
       </div>
       <div className="flex justify-center mt-5 lg:-mt-[50px]">
         <SimpleButton
           BtnTitle={"Order Now"}
-          className="lg:inline-flex text-[38px] !px-20"
+          className="lg:inline-flex text-[38px] !px-20 font-mb-medium flex items-center pt-3"
         />
       </div>
 
-      <div className="flex flex-col items-center justify-between w-full p-6 mt-5 space-y-3 lg:flex-row lg:space-y-0 lg:space-x-4">
-        <div className="w-full text-center lg:w-1/5 lg:text-left">
-          <PrimaryHeading heading="Place Your Order Via" className={"!text-4xl"} />
+      <div className="flex flex-col items-center justify-between w-full my-5 space-y-3 lg:flex-row lg:space-y-0 gap-2 ">
+
+        <div className="w-full text-center lg:w-3/12  lg:text-left ">
+          <PrimaryHeading heading="Place Your Order Via" className={"lg:!text-2xl xl:!text-4xl"} />
         </div>
 
-        <div className=" w-28 h-0.5 bg-gray-400"></div>
-        <div className="flex items-center justify-center w-full space-x-3 lg:w-1/5">
-          <CustomImage src={linkedin} className="w-[50px] h-[50px]" />
-          <div className="border w-[50px] h-[50px] p-2 rounded-lg bg-[#9A9A9A]">
-            <CustomImage src={message} className=" w-full h-full " />
+        <div className="w-4/12 xl:w-[15%] h-0.5 lg:w-1/12 bg-gray-400 "></div>
+
+        <div className="flex items-center justify-center  space-x-3 lg:w-4/12   ">
+          <CustomImage src={linkedin} className="w-[50px] h-[50px]" data-aos={"flip-right"} />
+          <div className="w-[50px] h-[50px] p-2 rounded-lg bg-[#9A9A9A] block" data-aos={"flip-right"}>
+            <CustomImage src={message} className=" w-full h-full "  />
           </div>
-          <CustomImage src={whatsapp} className="w-[50px] h-[50px] " />
-          <CustomImage src={telegram} className="w-[50px] h-[50px]" />
+          <CustomImage src={whatsapp} className="w-[50px] h-[50px] " data-aos={"flip-right"}/>
+          <CustomImage src={telegram} className="w-[50px] h-[50px]" data-aos={"flip-right"}/>
         </div>
 
-        <div className=" w-28 h-0.5 bg-gray-400"></div>
-        <div className="w-full text-center lg:w-1/5 lg:text-left">
-          <SecondaryDescription description="Directly send message to us" />
-          <div className="border rounded-full flex items-center justify-between  p-2">
+        <div className="w-4/12  xl:w-[15%] h-0.5 lg:w-1/12 bg-gray-400 "></div>
+
+        <div className="w-full text-center lg:w-3/12 lg:text-left  max-w-sm">
+          <SecondaryDescription description="Directly send message to us" className={""} />
+          <div className=" rounded-full flex items-center justify-between border p-2 max-lg:mt-2">
             <SecondaryDescription description="I want your services" className={"!text-sm ml-2"} />
             <div className="bg-[#32CD21] py-2 px-4 rounded-full">
               <SecondaryDescription description="send" className="!text-sm" />

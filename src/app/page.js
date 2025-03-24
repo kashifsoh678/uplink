@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import PortfolioCard from "@/components/common/cards/portfolio-card";
 import PortfolioDetailCard from "@/components/common/cards/portfolio-detail-card";
 import ReviewCard from "@/components/common/cards/review-card";
@@ -10,10 +10,7 @@ import MainHeading from "@/components/typography/main-heading";
 import PrimaryDescription from "@/components/typography/primary-description";
 import PrimaryHeading from "@/components/typography/primary-heading";
 import LayoutProvider from "@/components/wrapper/layout-provider";
-import {
-  ClientReviewsArray,
-  WhyUplinkDataArray
-} from "@/utils/constants";
+import { ClientReviewsArray, WhyUplinkDataArray } from "@/utils/constants";
 import { useState } from "react";
 import { FaRegClock } from "react-icons/fa6";
 import { GoStarFill } from "react-icons/go";
@@ -45,7 +42,11 @@ export default function Home() {
     setSelectedSlide(item);
   };
   const blackLinkServiceArray = [
-    { id: 0, src: "/assets/svg/domain-authority.svg", text: "Domain Authority" },
+    {
+      id: 0,
+      src: "/assets/svg/domain-authority.svg",
+      text: "Domain Authority",
+    },
     { id: 1, src: "/assets/images/edit.png", text: "Guest Post Outreach" },
     { id: 2, src: "/assets/images/backlinks.png", text: "Organic Backlinks" },
     { id: 3, src: "/assets/images/search.png", text: "Monthly SEO" },
@@ -67,21 +68,25 @@ export default function Home() {
     }
   };
   const companyLogo = [
-    bitcoin,
-    wise,
-    tetherLogo,
-    stripe,
-    payoneer,
-    paypal,
-    bank,
-    binance,
+    { height: 80, width: 80, src: bitcoin },
+    { height: 600, width: 1000, src: wise },
+    { height: 600, width: 1000, src: tetherLogo },
+    { height: 100, width: 100, src: stripe },
+    { height: 200, width: 200, src: payoneer },
+    { height: 150, width: 150, src: paypal },
+    { height: 300, width: 800, src: bank },
+    { height: 180, width: 180, src: binance },
   ];
   return (
     <>
-      <LayoutProvider parentClassName={"bg-[#FFFFFF] h-full p-5 relative  bg-home_background bg-cover bg-center bg-no-repeat"}>
+      <LayoutProvider
+        parentClassName={
+          "bg-[#FFFFFF] h-full p-5 relative  bg-home_background bg-cover bg-center bg-no-repeat"
+        }
+      >
         <div className="flex flex-col gap-4 md:flex-row ">
           <div className="flex flex-col justify-center w-full gap-4  md:gap-6 lg:gap-8 ">
-            <div data-aos="fade-left" >
+            <div data-aos="fade-left">
               <MainHeading
                 text={"Uplinke AI"}
                 className={"max-md:text-center"}
@@ -95,7 +100,8 @@ export default function Home() {
                 className={"max-md:text-center"}
               />
             </div>
-            <PrimaryDescription data-aos="fade-left"
+            <PrimaryDescription
+              data-aos="fade-up"
               description="Uplinke.com: Your partner for real online growth unlock your site’s potential with White Hat SEO and see results before you pay. Achieve digital success with Uplinke!"
               className={"max-md:text-center max-md:max-w-md max-md:mx-auto"}
             />
@@ -133,7 +139,10 @@ export default function Home() {
             {/* ================================== */}
           </div>
           {/* ============================= */}
-          <div className="w-full flex items-center justify-center p-4 md:h-[400px] lg:min-h-[600px] " data-aos="fade-right">
+          <div
+            className="w-full flex items-center justify-center p-4 md:h-[400px] lg:min-h-[600px] "
+            data-aos="zoom-in"
+          >
             <CustomImage
               src={main_home}
               className="object-contain w-full h-full"
@@ -141,12 +150,12 @@ export default function Home() {
           </div>
         </div>
         {/* =============== */}
-        <div className="w-full" data-aos="fade-up">
-          <PrimaryHeading
-            heading={"Powered By"}
-            className="mb-2 text-center"
-          />
-          <div className="flex flex-col flex-wrap items-center justify-center gap-4 md:flex-row md:items-end md:gap-6">
+        <div className="w-full">
+          <PrimaryHeading heading={"Powered By"} className="mb-2 text-center" />
+          <div
+            className="flex flex-col flex-wrap items-center justify-center gap-4 md:flex-row md:items-end md:gap-6"
+            data-aos="zoom-in"
+          >
             <CustomImage
               className="w-[130px] md:h-[60px]"
               src={majestic_powered_by}
@@ -175,58 +184,92 @@ export default function Home() {
         parentClassName={
           "  bg-home_background bg-contain  bg-no-repeat relative min-h-[500px] md:min-h-screen w-full "
         }
-        childClassName={"border "}
+        childClassName={""}
       >
-
-
-        <div className="flex flex-wrap items-center justify-center gap-8 "></div>
-
-        <div className="flex flex-wrap justify-center gap-2.5 mb-5" data-aos="fade-up">
+        <div className="flex flex-wrap justify-center gap-5 my-5 md:my-8">
           {blackLinkServiceArray.map((item) => (
             <div
               key={item.id}
-              className={`p-3 flex flex-col gap-2.5 w-[110px] items-center border rounded-lg cursor-pointer ${activeSlide === item.id ? "active-global-clr text-white" : "text-gray-400 bg-[#F4F4F5]"
-                }`}
+              className={`p-3  flex flex-col gap-2.5  w-[120px] items-center  rounded-lg cursor-pointer transition-transform duration-100   ${
+                activeSlide === item.id
+                  ? "active-global-clr text-white   " // Zoom effect with scale
+                  : "text-gray-400 bg-[#F4F4F5]  " // Default scale
+              }`}
               onClick={() => setActiveSlide(item.id)}
-              style={{ boxShadow: "0px 3px 6px #00000029", opacity: "1" }}
+              style={{
+                boxShadow: "0px 3px 6px #00000029",
+                opacity: "1",
+                transform: activeSlide === item.id && "scale(1.1)",
+                zIndex: 9,
+              }}
+              data-aos="zoom-in"
             >
               <CustomImage
                 src={item.src}
                 width={0}
                 height={0}
-                className={`w-[50px] h-[50px] transition-all ${activeSlide === item.id ? "filter invert brightness-0" : ""
-                  }`}
+                className={`w-[50px] h-[50px] transition-all duration-300 ${
+                  activeSlide === item.id
+                    ? "filter invert brightness-200" // White image when active
+                    : "filter-none" // Default image color
+                }`}
               />
-              <p className="text-sm text-center font-semibold text-[16px]">{item.text}</p>
+              <p className="text-sm text-center font-semibold text-[16px]">
+                {item.text}
+              </p>
             </div>
           ))}
         </div>
 
-
         {/* Render Slide */}
-        <div className="px-5 py-10 lg:p-10 bg-linear-clr  rounded-[28px] !bg-transparent" style={{ boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029" }}>{renderSlide()}</div>
-
-
-
-        <div className="flex flex-wrap justify-center w-full mt-5 space-x-2">
-          {companyLogo.map((icon, index) => (
-            <CustomImage
-              key={index}
-              src={icon}
-              className="w-[150px] h-20 object-contain"
-            />
-          ))}
+        <div
+          className="px-5 py-10 lg:p-10 bg-linear-clr  rounded-[28px] bg-[#FFFFFF]"
+          style={{
+            boxShadow: "inset 0px 3px 6px #00000029, 0px 6px 6px #00000029",
+          }}
+        >
+          {renderSlide()}
+          <div className=" max-w-[1440px] mx-auto my-4 md:my-8 lg:my-12 w-full">
+        
+        <CustomSwiperControl
+          slides={companyLogo ?? []}
+          slidesPerViewConfig={{ 320:2,640: 3, 768: 3, 1024: 4, 1280: 7 }}
+          loop={true}
+          cardComponent={(data) => {
+            let imgsrc=data.data.src
+            return (
+              <div className="w-[100%] h-[100px] p-1 flex items-center justify-center">
+              <CustomImage
+                src={imgsrc}
+                className={`object-contain  h-[100%]`}
+                width={data.data.width}
+                height={data.data.height}
+                />
+                </div>
+            );
+          }}
+          customSwiperStyles={{
+            padding: "10px",
+          }}
+          customSwiperSlideStyles={{       
+          }}
+          spaceBetween={8}
+        />
+      </div>
         </div>
+       
 
+      
       </LayoutProvider>
-
+      
+    
       {/* ============================================================================= Portfolio */}
 
       <LayoutProvider
-        parentClassName={" border w-full relative "}
-        childClassName={"border w-full pb-8"}
+        parentClassName={"  w-full relative "}
+        childClassName={" w-full pb-8 !bg-transprent"}
       >
-        <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto ">
+        <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto">
           <PrimaryHeading
             heading={"Our Portfolio"}
             className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold text-center"
@@ -235,12 +278,12 @@ export default function Home() {
             description={
               "Choosing SEO Flox Means Partnering With An SEO Team Dedicated To Your Growth And Lasting Online Success."
             }
-            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl border"
+            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl"
           />
         </div>
 
-        <div className="w-full bg-center bg-no-repeat bg-fixed bg-portfolio_background">
-          <div className="flex flex-col gap-10 xl:flex-row bg-white/50 backdrop-blur-lg">
+        <div className="w-full  bg-no-repeat bg-cover bg-center bg-portfolio_background">
+          <div className="flex flex-col gap-10 xl:flex-row bg-white/30 backdrop-blur-md">
             <div className="flex justify-center gap-4 max-xl:flex-wrap xl:flex-col">
               <PortfolioCard
                 src="/assets/images/domain-authority.png"
@@ -278,11 +321,14 @@ export default function Home() {
       </LayoutProvider>
       {/* ============================================================================= Why */}
       <LayoutProvider
-        parentClassName={"px-5 border w-full "}
-        childClassName={"border"}
+        parentClassName={"px-5  w-full "}
+        childClassName={""}
       >
         {/* ===header */}
-        <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto" data-aos="fade-up">
+        <div
+          className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto"
+          data-aos="fade-up"
+        >
           <PrimaryHeading
             heading={"Why Uplinks"}
             className="!text-3xl md:!text-4xl lg:!text-6xl font-mb-bold text-center"
@@ -291,15 +337,18 @@ export default function Home() {
             description={
               "Choosing SEO Flox Means Partnering With An SEO Team Dedicated To Your Growth And Lasting Online Success."
             }
-            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl border"
+            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl "
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 " data-aos="fade-up">
+        <div
+          className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 "
+          data-aos="fade-up"
+        >
           {WhyUplinkDataArray?.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-2 p-2 border md:items-start md:gap-3 max-md:max-w-md max-md:mx-auto"
+              className="flex flex-col items-center gap-2 p-2  md:items-start md:gap-3 max-md:max-w-md max-md:mx-auto"
             >
               <div
                 className={`flex items-center justify-center w-[80px] h-[80px] rounded-lg shadow-md`}
@@ -323,8 +372,8 @@ export default function Home() {
       <About />
       {/* ============================================================================= Review */}
       <LayoutProvider
-        parentClassName={" border w-full "}
-        childClassName={"border"}
+        parentClassName={"  w-full "}
+        childClassName={""}
       >
         {/* ===header */}
         <div className="w-full flex flex-col items-center my-[20px] md:my-[30px] lg:my-[50px] gap-4 md:gap-6 lg:gap-8 mx-auto">
@@ -334,7 +383,7 @@ export default function Home() {
           />
           <PrimaryDescription
             description={"We Have Worked with Individuals And Businesses."}
-            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl border"
+            className="text-center !text-md md:!text-xl lg:!text-2xl text-[#B5B5B5] font-mb-regular max-w-6xl"
           />
         </div>
         <CustomSwiperControl

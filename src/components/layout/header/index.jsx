@@ -39,7 +39,7 @@ const Header = () => {
         } rounded-lg shadow-xl`}
       >
         <div className="flex items-center justify-between ">
-          <div className="cursor-pointer rounded-lg bg-blue-600 py-2 px-8 max-w-auto ">
+          <div className="cursor-pointer rounded-lg bg-blue-600 py-2 px-8 max-w-auto " data-aos="zoom-in">
             <PrimaryHeading heading={"Uplinke"} className={"text-white"} />
           </div>
           <div className="max-lg:hidden lg:flex items-center gap-4">

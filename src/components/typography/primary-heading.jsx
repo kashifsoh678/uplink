@@ -1,9 +1,10 @@
 import React from "react";
 
-const PrimaryHeading = ({ heading, className = "" }) => {
+const PrimaryHeading = ({ heading, className = "", ...rest }) => {
   return (
     <h2
       className={`${className} font-[500] text-[18px] md:text-[20px] lg:text-[24px] leading-[30px] md:leading-[38px]  font-mb-medium `}
+      {...rest}
     >
       {heading}
     </h2>
